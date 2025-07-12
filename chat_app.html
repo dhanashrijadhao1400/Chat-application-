@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat App</title>
+    <link rel="stylesheet" href="chat_app.css">
+    <link rel="back-end" href="chat_app.py">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>💬 Real-Time Chat</h1>
+            <div class="connection-status status-disconnected" id="connectionStatus">
+                ● Disconnected
+            </div>
+        </div>
+
+        <div class="user-setup" id="userSetup">
+            <h3>Join the Chat</h3>
+            <br>
+            <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+            <button onclick="joinChat()">Join Chat</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages"></div>
+        
+        <div class="typing-indicator hidden" id="typingIndicator"></div>
+        
+        <div class="users-online" id="usersOnline">
+            👥 Users online: 0
+        </div>
+
+        <div class="chat-input hidden" id="chatInput">
+            <input type="text" id="messageInput" placeholder="Type your message..." maxlength="500">
+            <button onclick="sendMessage()" id="sendButton">Send</button>
+        </div>
+    </div>
+<script src="chat_app.js"></script>
+</body>
+</html>
